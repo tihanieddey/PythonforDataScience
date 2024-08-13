@@ -182,3 +182,74 @@ x = [10, 20, 30, 40, 50]
 y = [60, 70, 80, 90, 100]
 z = x + y
 print(z)
+
+print(fruits)
+# Let us insert a fruit in a particular index
+# insert is a method inside the list object
+# fruits is a list object
+fruits.insert(2, "banana")
+print(fruits)
+fruits.insert(5, "pineapple")
+print(fruits)
+# print(len(fruits))
+
+# Let us delete a fruit in a particular index
+# remove is a method inside the list object
+# fruits is a list object
+fruits.remove("mango")
+print(fruits)
+
+# Delete an item by index
+# We do not have a method to handle this
+# But we can use the del keyword to delete the item
+# del is a very powerful keyword in python
+# which deletes anything from memory immediately, permanently
+del fruits[1]
+print(fruits)
+
+# fruits[1] = "mango"
+# print(fruits)
+
+# you can also delete the entire list
+del fruits
+
+fruits = ["apple", "orange", "mango", "banana", "grapes", "durian", "rambutan", "cempedak"]
+fruits.clear()
+print(fruits)
+
+fruits = ["apple", "orange", "mango", "banana", "grapes", "durian", "rambutan", "cempedak"]
+# localfruits = fruits #this will create a shallow copy
+# both variables will point to the same location
+# you have to use loop or list comprehension and copy a list into another list
+# An easy approach is use the copy method
+localfruits = fruits.copy()
+print(fruits)
+print(localfruits)
+fruits.append("pineapple")
+print(fruits)
+print(localfruits)
+
+# the following statement will help you to find out how many apple we have
+# in the list
+print(fruits.count("apple"))
+
+# the following statement will help you to find out the index of durian
+# in the list
+print(fruits.index("durian"))
+
+# pop will remove the last item in the list
+fruits.pop()
+print(fruits)
+
+# sort by ascending order
+fruits.sort()
+print(fruits)
+
+# sort it by descending order (inline)
+fruits.reverse() # you loose the original ordering
+# if you want to maintain the original order then copy first
+print(fruits)
+
+fruits = ["apple", "orange", "mango", "banana", "avocado", "grapes"]
+fruits.sort()
+print(fruits)
